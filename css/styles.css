@@ -1,0 +1,184 @@
+:root {
+  --dark-gray: #454545;
+  --light-gray: #6f6f6f;
+  --white: #fff;
+  --light-green: #546130;
+  --dark-green: #2d3b09;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--dark-gray);
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+section {
+  padding: 1rem;
+}
+
+header {
+  width: 100%;
+  padding: 2rem;
+  color: var(--white);
+  text-align: center;
+}
+
+header p {
+  margin-top: 0.7rem;
+}
+
+/*HERO SECTION*/
+section.hero-section {
+  background: url("../assets/man-in-florest.svg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+}
+
+/*ARTICLES SECTION*/
+
+main .article-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  color: var(--white);
+}
+main .article-section article {
+  width: 100%;
+  max-width: 300px;
+}
+main .article-section article img {
+  width: 100%;
+  max-width: 300px;
+  border: 10px solid var(--light-gray);
+}
+
+main .article-section article h2 {
+  margin-top: 0.3rem;
+}
+
+main .article-section article p {
+  margin: 0.2rem auto 1.2rem;
+
+  line-height: 1.5rem;
+  max-width: 300px;
+  text-align: center;
+}
+
+/*FEATURED SECTION*/
+
+main .featured-section {
+  width: 100%;
+  background: var(--light-gray);
+  color: var(--white);
+}
+
+main .featured-section article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+main .featured-section article div.featured-section__image {
+  width: 18rem;
+  height: 18rem;
+  border: 14px solid var(--dark-gray);
+  border-radius: 50%;
+  background-image: url("../assets/man-in-florest.svg");
+  background-size: cover;
+}
+
+main .featured-section article img {
+  width: 100%;
+  border: 14px solid var(--dark-gray);
+  border-radius: 50%;
+}
+
+main .featured-section article h2 {
+  font-size: 2.2rem;
+  margin: 1.1rem 0 1.1rem;
+}
+
+main .featured-section article p {
+  margin-bottom: 5rem;
+  max-width: 600px;
+}
+main .featured-section article p strong {
+  margin-top: 1.4rem;
+  display: block;
+}
+main .featured-section article p i {
+  margin: 1.4rem 0;
+  display: block;
+}
+
+/*FOOTER*/
+
+footer {
+  color: var(--white);
+  padding: 3rem;
+  text-align: center;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (min-width: 600px) {
+  main .article-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    background: url("../assets/man-in-flores-desktop.png") no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 100vh;
+  }
+  header h1 {
+    color: var(--light-green);
+  }
+  header p {
+    color: var(--dark-green);
+    font-weight: bold;
+  }
+
+  .hero-section {
+    display: none;
+  }
+
+  main .article-section {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main .featured-section article {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}

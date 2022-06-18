@@ -16,6 +16,7 @@
 body {
   font-family: "Roboto", sans-serif;
   background: var(--dark-gray);
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -141,15 +142,6 @@ footer {
 /*RESPONSIVE*/
 
 @media screen and (min-width: 600px) {
-  main .article-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
   header {
     background: url("../assets/man-in-flores-desktop.png") no-repeat;
     background-size: cover;
@@ -164,11 +156,18 @@ footer {
     color: var(--dark-green);
     font-weight: bold;
   }
-
   .hero-section {
     display: none;
   }
+  main .article-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
 
+@media screen and (min-width: 768px) {
   main .article-section {
     display: flex;
     flex-direction: row;
